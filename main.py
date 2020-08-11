@@ -159,7 +159,7 @@ class Gui():
         heatSigDir = self.heatSig
         if Path.exists(Path(str(heatSigDir) + ".original")):
             os.remove(heatSigDir)
-            os.rename(Path(str(heatSigDir) + ".original"), "Heat_Signature.exe")
+            os.rename(Path(str(heatSigDir) + ".original"), str(heatSigDir))
             messagebox.showinfo("Success!", "Successfully removed texture pack.")
         else:
             messagebox.showerror("Can't find the original game",
